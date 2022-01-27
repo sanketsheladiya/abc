@@ -1,34 +1,10 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:streambuilder/counter.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: Myapp(),
+main() {
+  runApp(const MaterialApp(
+    home: CounterDemo(),
   ));
-}
-
-class Myapp extends StatelessWidget {
-  const Myapp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        floatingActionButton: FloatingActionButton(
-          onPressed: () => null,
-        ),
-        body: Column(
-          children: [
-            StreamBuilder(
-              stream: ,
-                builder:
-                    (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
-                       Text('data');
-
-                    },
-                 ),
-          ],
-        ),
-      ),
-    );
-  }
 }
