@@ -1,29 +1,13 @@
-import 'package:flutter/material.dart';
+import 'dart:async';
 
-class CounterDemo extends StatefulWidget {
-  const CounterDemo({Key? key}) : super(key: key);
+class counter {
+  static StreamController controller = StreamController();
+  static Stream get counterstream => controller.stream;
+  static Sink get countersink => controller.sink;
 
-  @override
-  _CounterDemoState createState() => _CounterDemoState();
-}
+  //static Sink get countersink => controller.sink;
 
-class _CounterDemoState extends State<CounterDemo> {
-  int counter = 0;
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text('you have pressed button $counter times'),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          
-          setState(() {
-            counter++;
-          });
-        },
-        child: const Icon(Icons.add),
-      ),
-    );
+  static set setdata(int data) {
+    countersink.add(data);
   }
 }
