@@ -1,6 +1,6 @@
 import 'dart:async';
 
-class counter {
+class Counter {
   static StreamController controller = StreamController();
   static Stream get counterstream => controller.stream;
   static Sink get countersink => controller.sink;

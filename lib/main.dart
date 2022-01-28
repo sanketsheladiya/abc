@@ -18,12 +18,12 @@ class Myapp extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
           child: StreamBuilder(
-              stream: counter.counterstream,
+              stream: Counter.counterstream,
               builder: (context, snapshot) {
                 return Text('U have this many $count Times');
               })),
       floatingActionButton: FloatingActionButton(onPressed: () {
-        counter.setdata = count++;
+        Counter.setdata = count++;
         //Countstreambuilder.dispose();
       }),
     );
